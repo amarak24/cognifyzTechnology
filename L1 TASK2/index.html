@@ -1,0 +1,100 @@
+<!-- Develop a basic button that changes
+its color when clicked using
+JavaScript.
+
+Create an alert box that displays a
+greeting message based on the current
+time using JavaScript.
+
+Build a basic calculator that adds two
+numbers together and displays the
+result using JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Color Change</title>
+    <style>
+      button {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      #calculator {
+        margin: 10px;
+      }
+
+      div {
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button onclick="changeColor()">Click me to change color</button>
+
+    <script>
+      function changeColor() {
+        var button = document.querySelector("button");
+        button.style.backgroundColor = getRandomColor();
+      }
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+
+    <script>
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+
+      var greeting;
+
+      if (hours < 12) {
+        greeting = "Good morning!";
+      } else if (hours < 18) {
+        greeting = "Good afternoon!";
+      } else {
+        greeting = "Good evening!";
+      }
+
+      alert(greeting);
+    </script>
+
+    <section id="calculator">
+      <div>
+        <label for="num1">Enter first number:</label>
+        <input type="number" id="num1" />
+      </div>
+
+      <div>
+        <label for="num2">Enter second number:</label>
+        <input type="number" id="num2" />
+      </div>
+      <button onclick="addNumbers()">Add</button>
+
+      <p id="result"></p>
+
+      <script>
+        function addNumbers() {
+          var num1 = parseFloat(document.getElementById("num1").value);
+          var num2 = parseFloat(document.getElementById("num2").value);
+
+          if (!isNaN(num1) && !isNaN(num2)) {
+            var result = num1 + num2;
+            document.getElementById("result").innerHTML = "Result: " + result;
+          } else {
+            alert("Please enter valid numbers.");
+          }
+        }
+      </script>
+    </section>
+  </body>
+</html>

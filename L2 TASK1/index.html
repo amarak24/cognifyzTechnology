@@ -1,0 +1,62 @@
+<!-- Front-end Frameworks:
+
+Use a front-end framework like Bulma
+or UIKit to create a responsive card
+component with an image and text.
+
+Implement a basic responsive grid
+layout using a front-end framework
+like Bootstrap or Foundation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <title>Responsive Card with Bulma and Bootstrap</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="columns is-centered">
+        <div class="column is-one-third-desktop is-half-tablet">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img
+                  src="https://placekitten.com/800/600"
+                  alt="Placeholder image"
+                />
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <p class="title is-4">Cat</p>
+                <p>
+                  Cats have very sweet features. It has two beautiful eyes,
+                  adorably tiny paws, sharp claws, and two perky ears which are
+                  very sensitive to sounds. It has a tiny body covered with
+                  smooth fur and it has a furry tail as well. Cats have an
+                  adorable face with a tiny nose, a big mouth and a few whiskers
+                  under its nose.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include Bootstrap JS if needed -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
